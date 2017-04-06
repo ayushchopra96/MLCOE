@@ -1,0 +1,20 @@
+sudo apt-get install build-essential libgtk2.0-dev libjpeg-dev libtiff4-dev libjasper-dev libopenexr-dev cmake python-dev python-numpy python-tk libtbb-dev libeigen3-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev libqt4-dev libqt4-opengl-dev sphinx-common texlive-latex-extra libv4l-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev default-jdk ant libvtk5-qt4-dev
+
+Download OpenCV 2.4.13
+
+From Terminal, cd to folder where OpenCV is downloaded
+
+In Terminal, type unzip opencv-2.4.13.zip
+
+In Terminal, type cd opencv-2.4.13
+
+In Terminal, type mkdir mkdir build && cd build
+
+cmake -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_IPP=OFF -D CMAKE_INSTALL_PREFIX=/usr ..
+
+Note: If above command return any error, try disable some options. For example
+BUILD_EXAMPLES=OFF
+
+In Terminal, type make
+
+In Terminal, type sudo make install
